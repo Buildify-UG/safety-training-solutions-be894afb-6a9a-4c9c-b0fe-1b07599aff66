@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Heart, Flame, Users, Award, CheckCircle, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -18,12 +19,17 @@ export default function Index() {
             <a href="#about" className="hover:text-primary transition">About</a>
             <a href="#contact" className="hover:text-primary transition">Contact</a>
           </div>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Get Started</Button>
+          <div className="flex gap-2">
+            <Link to="/student-portal">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">Student Portal</Button>
+            </Link>
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Get Started</Button>
+          </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary text-primary-foreground py-20 px-4">
+      <section className="relative bg-gradient-to-br from-primary to-secondary text-primary-foreground py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -31,7 +37,7 @@ export default function Index() {
                 Safety Training Excellence
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90">
-                International Cooperation Safety Training Centre — Your trusted partner in health, safety, and emergency preparedness.
+                International Cooperation Safety Training Centre (I.C.S.T.C) — Your trusted partner in health, safety, and emergency preparedness since 2024.
               </p>
               <div className="flex gap-4">
                 <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
@@ -247,8 +253,8 @@ export default function Index() {
                 <CardTitle>Location</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">123 Safety Street</p>
-                <p className="text-sm text-muted-foreground mt-2">Training Center, City</p>
+                <p className="text-muted-foreground">113-00515 Mumias Road</p>
+                <p className="text-sm text-muted-foreground mt-2">Nairobi, Kenya</p>
               </CardContent>
             </Card>
           </div>
